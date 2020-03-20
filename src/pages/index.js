@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
 const IndexPage = () => (
