@@ -54,6 +54,10 @@ module.exports = {
 };
 
 ```
+#### Changing Theme Colour
+
+To change theme colour, change `$primary` variable in `src/assets/sass/_variables.scss`.
+
 
 ### Deploying using Github page
 
