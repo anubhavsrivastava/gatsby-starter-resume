@@ -19,7 +19,6 @@ const IndexPage = () => (
             <span className="text-primary">{config.lastName}</span>
           </h1>
           <div className="subheading mb-5">
-            {config.address} · {config.phone} ·
             <a href={`mailto:${config.email}`}>{config.email}</a>
           </div>
           <p className="lead mb-5">
@@ -28,7 +27,7 @@ const IndexPage = () => (
             strategy foster collaborative thinking to further the overall value
             proposition.
           </p>
-          <div className="social-icons">
+          <div className="social-icons" >
             {config.socialLinks.map(social => {
               const { icon, url } = social;
               return (
