@@ -22,11 +22,6 @@ module.exports = {
       name: 'Twitter',
       url: 'https://linkedin.com/in/amalmattyantony',
     },
-    {
-      icon: 'fa-envelope-o',
-      name: 'Email',
-      url: 'mailto:amalmattyantony@gmail.com',
-    },
   ],
   email: 'amalmattyantony@gmail.com',
 };

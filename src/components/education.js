@@ -16,11 +16,11 @@ export default function Education({ data }) {
               <div className="resume-content">
                 <h3 className="mb-0">{node.frontmatter.school}</h3>
                 <div className="subheading mb-3">{node.frontmatter.course}</div>
-                <div dangerouslySetInnerHTML={{__html:node.html}}/>
                 <p>{node.frontmatter.gpa}</p>
+                <div dangerouslySetInnerHTML={{__html:node.html}}/>
               </div>
               <div className="resume-date text-md-right">
-                <span className="text-primary">August 2006 - May 2010</span>
+                <span className="text-primary">{node.frontmatter.dateRange}</span>
               </div>
             </div>
           })
