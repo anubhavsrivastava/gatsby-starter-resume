@@ -127,7 +127,7 @@ const IndexPage = ({ location, data }) => (
   </Layout>
 );
 
-export const query = graphql`
+export const query =useStaticQuery(graphql`
   {
     jobs: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/jobs/"}},sort:{
         fields: [frontmatter___date]
@@ -186,7 +186,7 @@ export const query = graphql`
       }
     }
   }
-`;
+`);
 
 export default IndexPage;
 
