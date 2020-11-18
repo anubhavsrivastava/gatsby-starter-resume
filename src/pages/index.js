@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
-import { graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Jobs from '../components/jobs';
 import Education from '../components/education';
 import Awards from '../components/awards';
@@ -127,7 +127,7 @@ const IndexPage = ({ location, data }) => (
   </Layout>
 );
 
-export const query =useStaticQuery(graphql`
+export const query = useStaticQuery(graphql`
   {
     jobs: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/jobs/"}},sort:{
         fields: [frontmatter___date]

@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 
 export default function Awards({ data }) {
   const lists = data.edges[0].node.frontmatter;
@@ -14,7 +13,6 @@ export default function Awards({ data }) {
       {
         list.map(
           (element) => {
-            const node = data.edges[0].node;
             return <li>
               <i className="fa-li fa fa-trophy text-warning"></i>
               {element}
