@@ -1,3 +1,3 @@
 ---
 ---
-Howdy, I am a software engineer working at Arcesium.
+Howdy, I am a grad student at Carnegie Mellon, pursuing Master of Software Engineering in Scalable Systems
