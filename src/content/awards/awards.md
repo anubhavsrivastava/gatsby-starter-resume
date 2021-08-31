@@ -1,5 +1,5 @@
 ---
-company: 'lol man'
+company: ''
 awards: 
 - Recipient of Prime Minister’s Scholarship under National Defense Fund
 - One of the four recipients of  the Outstanding Student Achievement Award for the batch of 2015-19
