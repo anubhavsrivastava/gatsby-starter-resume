@@ -169,7 +169,10 @@ export const query = graphql`
         }
       }
     }
-    education: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/education/"}}) {
+    education: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/education/"}},sort:{
+      fields: [frontmatter___date]
+      order: DESC
+  }) {
       edges {
         node {
           fileAbsolutePath
