@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import '../assets/sass/resume.scss';
-
 class Layout extends Component {
   render() {
     const { children } = this.props;
+    return (
+      <>
+        <div className={'main-body'}>{children}</div>
+      </>
+    );
+  }
+
+  Head() {
     return (
       <StaticQuery
         query={graphql`
@@ -21,23 +27,16 @@ class Layout extends Component {
         `}
         render={data => (
           <>
-            <Helmet
-              title={data.site.siteMetadata.title}
-              meta={[
-                { name: 'description', content: 'Resume' },
-                { name: 'keywords', content: 'site, web' },
-              ]}
-            >
-              <html lang="en" />
-            </Helmet>
-            <div className={'main-body'}>{children}</div>
+            <title>{data.site.siteMetadata.title}</title>
+            <html lang="en" />
+            <meta name="description" content="Resume" />
+            <meta name="keywords" content="site, web" />
           </>
         )}
       />
     );
   }
 }
-
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };

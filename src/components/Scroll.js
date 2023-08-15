@@ -59,9 +59,9 @@ class Scroll extends React.Component {
     return (
       <Element>
         {typeof this.props.children === 'object' ? (
-          React.cloneElement(this.props.children, { onClick: this.handleClick })
+          React.cloneElement(this.props.children, { onClick: this.handleClick, onKeyDown: this.handleClick })
         ) : (
-          <span onClick={this.handleClick}>{this.props.children}</span>
+          <span role='presentation' onClick={this.handleClick} onKeyDown={this.handleClick}>{this.props.children}</span>
         )}
       </Element>
     );
